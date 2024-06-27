@@ -65,12 +65,14 @@ alias act='source bin/activate && . && c'
 alias gcl="git clone"
 alias gps='git push origin "$(git_current_branch)"'
 alias gpl='git pull origin "$(git_current_branch)"'
-alias ghst='git log --oneline --graph --all'
-alias glg='git log --oneline --all'
+alias glgg='pretty_git_log_all'
+alias glg='pretty_git_log'
 alias gdf='git diff'
+alias gdfh='show_git_head'
 alias ga='git add'
 alias gaa='git add .'
 alias gdsc='git checkout -- .'
+alias gb='pretty_git_branch_sorted'
 
 # Github (gh)
 alias repo='gh repo create'

@@ -41,10 +41,12 @@ show_git_head() {
     git show -p --pretty="tformat:"
 }
 
+# | git_page_maybe at the end for pagination
 pretty_git_log() {
-    git log --since="12 months ago" --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
+    git log --since="12 months ago" --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format
 }
 
+# | git_page_maybe at the end for pagination
 pretty_git_log_all() {
     git log --all --since="12 months ago" --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
 }
