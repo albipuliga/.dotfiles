@@ -70,6 +70,7 @@ plugins=(
   sudo
   direnv
   zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 # User configuration
@@ -152,3 +153,8 @@ export LS_COLORS="$LS_COLORS:*.csv=35"     # Customize color for .csv files to b
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+if [[ $ZSH_EVAL_CONTEXT == 'file' ]]; then
+  source "/Users/albertopuliga/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  source "/Users/albertopuliga/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
