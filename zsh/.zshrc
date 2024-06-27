@@ -69,6 +69,7 @@ plugins=(
   history
   sudo
   direnv
+  zsh-syntax-highlighting
 )
 
 # User configuration
