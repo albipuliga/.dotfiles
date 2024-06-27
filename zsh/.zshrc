@@ -62,19 +62,13 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-# zsh-autosuggestions
-# dirhistory
-# copybuffer
-# poetry
 plugins=(
-    git
-    copypath
-    macos
-    history
-    sudo
-    zsh-syntax-highlighting
-	direnv
+  git
+  copypath
+  macos
+  history
+  sudo
+  direnv
 )
 
 # User configuration
