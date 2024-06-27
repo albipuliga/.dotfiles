@@ -1,0 +1,152 @@
+tap "hashicorp/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "jandedobbeleer/oh-my-posh"
+tap "mongodb/brew"
+tap "supabase/tap"
+# TIFF library and utilities
+brew "libtiff"
+# Color management engine supporting ICC profiles
+brew "little-cms2"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Software library to render fonts
+brew "freetype"
+# Core application library for C
+brew "glib"
+# Vector graphics library with cross-device output support
+brew "cairo"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Modern replacement for 'ls'
+brew "exa"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Open h.265 video codec implementation
+brew "libde265"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Generate pixel-perfect macOS folder icons in the native style
+brew "folderify"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Git extension for versioning large files
+brew "git-lfs"
+# Improved top (interactive process viewer)
+brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Time series, events, and metrics database
+brew "influxdb"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Lazier way to manage everything docker
+brew "lazydocker"
+# Portable Foreign Function Interface library
+brew "libffi"
+# Postgres C API library
+brew "libpq"
+# Atlas CLI enables you to manage your MongoDB Atlas
+brew "mongodb-atlas-cli"
+# Open source relational database management system
+brew "mysql"
+# Development kit for the Java programming language
+brew "openjdk"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Develop and deploy code with zero configuration
+brew "railway"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Official tldr client written in Rust
+brew "tlrc"
+# Convert HTML to PDF
+brew "weasyprint"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# This package contains standard utilities for interacting with MongoDB.
+brew "mongodb/brew/mongodb-database-tools"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
+# Supabase CLI
+brew "supabase/tap/supabase"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Menu bar tool to limit maximum charging percentage
+cask "aldente"
+# Utilities designed to make common development tasks easier
+cask "devtoys"
+# Voice and text chat software
+cask "discord"
+# Status monitoring
+cask "eul"
+# Reimagine your terminal
+cask "fig"
+cask "font-fira-code-nerd-font"
+# Tool that helps teams design every part of the product experience
+cask "framer"
+# Windows manager and desktop organiser
+cask "hazeover"
+# Terminal built on web technologies
+cask "hyper"
+# Convert your caps lock key or any of your modifier keys to the hyper key
+cask "hyperkey"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
+# Alternative input source switcher
+cask "kawa"
+# Move and resize windows with mouse
+cask "lasso"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# Screen and video recording software
+cask "loom"
+# Controls and monitors all fans on Apple computers
+cask "macs-fan-control"
+# Web browser
+cask "microsoft-edge"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
+# Smooths scrolling and set mouse scroll directions independently
+cask "mos"
+# Calendar for professionals and teams
+cask "notion-calendar"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Bundle with over 30 tools
+cask "parallels-toolbox"
+# Local datastore, server, and ML engine powering the Pieces for Developers Suite
+cask "pieces-os"
+# Rust-based terminal
+cask "warp"
+# HTML to PDF renderer
+cask "wkhtmltopdf"
+# Multiplayer code editor
+cask "zed"

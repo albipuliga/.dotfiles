@@ -1,0 +1,29 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Alberto Puliga
+	email = albi.puliga@gmail.com
+[core]
+	pager = delta
+	editor = code --wait
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	hyperlinks = true
+	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+[merge]s
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[gitbutler]
+	signCommits = false
+	aiModelProvider = openai
+# $ git config --global status.showUntrackedFiles no
+# $ git config --local status.showUntrackedFiles no
+[init]
+	defaultBranch = main
