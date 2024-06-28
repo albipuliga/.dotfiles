@@ -74,6 +74,7 @@ alias gaa='git add .'
 alias gdsc='git checkout -- .'
 alias gb='pretty_git_branch_sorted'
 alias gstiu='gst --ignored -u'
+alias gfc='glg | grep $1'
 
 # Github (gh)
 alias repo='gh repo create'
