@@ -43,7 +43,7 @@ show_git_head() {
 
 # | git_page_maybe at the end for pagination
 pretty_git_log() {
-    git log --since="12 months ago" --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format
+    git log --reverse --since="12 months ago" --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format
 }
 
 # | git_page_maybe at the end for pagination
