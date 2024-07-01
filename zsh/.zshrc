@@ -14,6 +14,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR='code --wait'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -26,7 +27,7 @@ export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode auto  # update automatically without asking
 
 # Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 5
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -94,7 +95,8 @@ plugins=(
 # eval "$(op completion zsh)"; compdef _op op
 
 # zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)" # cd uses zoxide under the hood
 
 # thefuck
 export THEFUCK_NO_COLORS='false'
@@ -124,6 +126,28 @@ source ~/.dotfiles/zsh/git.zsh
 
 # Load fzf
 source <(fzf --zsh)
+export FZF_COMPLETION_TRIGGER='00'
+# export FZF_COMPLETION_TRIGGER=''
+# bindkey '^T' fzf-completion
+# bindkey '^I' $fzf_default_completion
+
+# bat
+export BAT_CONFIG_PATH="/Users/albertopuliga/.dotfiles/bat/config"
+
+# manbat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+
+# Forgit
+[ -f $HOMEBREW_PREFIX/share/forgit/forgit.plugin.zsh ] && source $HOMEBREW_PREFIX/share/forgit/forgit.plugin.zsh
+PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
+export FORGIT_FZF_DEFAULT_OPTS="
+--exact
+--border
+--cycle
+--reverse
+--height '80%'
+"
 
 # Reload aliases before each command
 precmd () {

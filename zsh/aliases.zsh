@@ -14,12 +14,30 @@ alias lsg='ls -a | grep $1'
 # General
 alias c='clear'
 alias h='history'
-alias cpp='copypath'
+alias dk='cd ~/Desktop'
+#------------------------------
 alias reload='source ~/.zshrc'
 alias zshrc="code ~/.zshrc"
-alias dk='cd ~/Desktop'
+alias cpp='copypath'
 alias top='btop'
 alias rr='ranger'
+
+# fzf
+# Search syntax
+# | Token     | Match type                 | Description                          |
+# | --------- | -------------------------- | ------------------------------------ |
+# | `sbtrkt`  | fuzzy-match                | Items that match `sbtrkt`            |
+# | `'wild`   | exact-match (quoted)       | Items that include `wild`            |
+# | `^music`  | prefix-exact-match         | Items that start with `music`        |
+# | `.mp3$`   | suffix-exact-match         | Items that end with `.mp3`           |
+# | `!fire`   | inverse-exact-match        | Items that do not include `fire`     |
+# | `!^music` | inverse-prefix-exact-match | Items that do not start with `music` |
+# | `!.mp3$`  | inverse-suffix-exact-match | Items that do not end with `.mp3`    |
+
+alias fa='fzf'
+alias fcf='code $(fzf --preview "bat --style=numbers --color=always {}")'
+alias fps='ps aux | fzf --reverse --height 50%'
+alias fpsk='ps aux | fzf --reverse --height 50% | awk "{print $2}" | xargs kill -9'
 
 # AWS Q
 alias qc='q chat'
@@ -31,6 +49,9 @@ alias bl='brew list'
 alias bi='brew install'
 alias bu='brew uninstall'
 alias updt='brew update && brew upgrade && omz update'
+
+# npm
+alias nrd='npm run dev'
 
 # Python
 alias py='python3'
@@ -47,19 +68,14 @@ alias ppr='pip install -r requirements.txt'
 alias reqs='pipreqs . --scan-notebooks'
 alias reqsf='pipreqs . --force --scan-notebooks'
 
-# Virtual Environment
-# virtuenv & wrapper
+# Virtuenv & wrapper
 alias menv='mkvirtualenv'
 alias wenv='workon'
 alias renv='rmvirtualenv'
 alias lenv='lsvirtualenv'
 alias denv='deactivate && c'
-# vanilla venv
+# Vanilla venv
 alias act='source bin/activate && . && c'
-# env() {
-#     python3 -m venv "$1"       # Create the virtual environment with the given name
-#     source "$1/bin/activate"      # Activate the virtual environment
-# }
 
 # Git
 alias gcl="git clone"
@@ -69,7 +85,6 @@ alias glgg='pretty_git_log_all'
 alias glg='pretty_git_log'
 alias gdf='git diff'
 alias gdfh='show_git_head'
-alias ga='git add'
 alias gaa='git add .'
 alias gdsc='git checkout -- .'
 alias gb='pretty_git_branch_sorted'
@@ -81,13 +96,33 @@ alias repo='gh repo create'
 alias ghcs='gh copilot suggest'
 alias ghce='gh copilot explain'
 
+# Forgit
+alias fga='forgit::add'
+# forgit_log=glo
+# forgit_diff=gd
+# forgit_add=ga
+# forgit_reset_head=grh
+# forgit_ignore=gi
+# forgit_checkout_file=gcf
+# forgit_checkout_branch=gcb
+# forgit_branch_delete=gbd
+# forgit_checkout_tag=gct
+# forgit_checkout_commit=gco
+# forgit_revert_commit=grc
+# forgit_clean=gclean
+# forgit_stash_show=gss
+# forgit_stash_push=gsp
+# forgit_cherry_pick=gcp
+# forgit_rebase=grb
+# forgit_blame=gbl
+# forgit_fixup=gfu
+
 # Docker
 alias dco="docker compose"
 alias dps="docker ps"
 alias dpa="docker ps -a"
 alias dl="docker ps -l -q"
 alias dx="docker exec -it"
-alias ds="docker stop"
 
 # Supabase
 alias spb='supabase'
