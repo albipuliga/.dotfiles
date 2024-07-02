@@ -76,6 +76,8 @@ pretty_git_format() {
         # Shorten names
         sed -Ee 's/<Andrew Burgess>/<me>/' |
         sed -Ee 's/<([^ >]+) [^>]*>/<\1>/' |
+        # Truncate commit messages longer than 50 characters
+        awk -F'}' '{ if (length($NF) > 50) $NF = substr($NF, 1, 47) "..." ; print $0 }' OFS='}' |
         # Line columns up based on } delimiter
         column -s '}' -t
 }
