@@ -109,6 +109,8 @@ source /opt/homebrew/bin/virtualenvwrapper.sh
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='-m --preview "bat --style=numbers --color=always {}"'
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
