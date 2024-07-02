@@ -35,7 +35,7 @@ alias rr='ranger'
 # | `!.mp3$`  | inverse-suffix-exact-match | Items that do not end with `.mp3`    |
 
 alias fa='fzf'
-alias fcf='code $(fzf --preview "bat --style=numbers --color=always {}")'
+alias fcf='code $(fzf -m --preview "bat --style=numbers --color=always {}")'
 alias fps='ps aux | fzf --reverse --height 50%'
 alias fpsk='ps aux | fzf --reverse --height 50% | awk "{print $2}" | xargs kill -9'
 
@@ -81,11 +81,12 @@ alias act='source bin/activate && . && c'
 alias gcl="git clone"
 alias gps='git push origin "$(git_current_branch)"'
 alias gpl='git pull origin "$(git_current_branch)"'
-alias glgg='pretty_git_log_all'
+# alias glgg='pretty_git_log_all'
 alias glg='pretty_git_log'
-alias gdf='git diff'
+# alias gdf='git diff'
 alias gdfh='show_git_head'
 alias gaa='git add .'
+alias gu='git reset HEAD .'
 alias gdsc='git checkout -- .'
 alias gb='pretty_git_branch_sorted'
 alias gstiu='gst --ignored -u'

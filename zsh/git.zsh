@@ -19,6 +19,21 @@ BRANCH_AUTHOR="%(color:blue)%(color:bold)<%(authorname)>%(color:reset)"
 BRANCH_CONTENTS="%(contents:subject)"
 BRANCH_FORMAT="}$BRANCH_PREFIX}$BRANCH_REF}$BRANCH_HASH}$BRANCH_DATE}$BRANCH_AUTHOR}$BRANCH_CONTENTS"
 
+# Shortcut for committing changes with a message
+gcmt() {
+    git commit -m "$1"
+}
+
+# Shortcut for committing all changes with a message
+gcma() {
+    git commit -a -m "$1"
+}
+
+# Shortcut for checking out a git branch using fzf for interactive selection
+gfb() {
+    git checkout $(git branch | fzf)
+}
+
 # Displays the latest commit information
 show_git_head() {
     pretty_git_log -1
@@ -76,37 +91,6 @@ git_page_maybe() {
     fi
 }
 
-# Shortcut for checking out a git branch using fzf for interactive selection
-gfb() {
-    git checkout $(git branch | fzf)
-}
-
-# Shortcut for committing changes with a message
-gcmt() {
-    git commit -m "$1"
-}
-
-# Shortcut for committing all changes with a message
-gcma() {
-    git commit -a -m "$1"
-}
-
-# Displays a pretty formatted git log with interactive selection using fzf
-gbc() {
-    git log --graph --color=always \
-        --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
-        fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort --preview \
-            'f() { set -- $(echo -- "$@" | grep -o "[a-f0-9]\{7\}"); [ $# -eq 0 ] || git show --color=always $1 ; }; f {}' \
-            --header "enter to view, ctrl-o to checkout" \
-            --bind "q:abort,ctrl-f:preview-page-down,ctrl-b:preview-page-up" \
-            --bind "ctrl-o:become:(echo {} | grep -o '[a-f0-9]\{7\}' | head -1 | xargs git checkout)" \
-            --bind "ctrl-m:execute:
-                (grep -o '[a-f0-9]\{7\}' | head -1 |
-                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
-                {}
-FZF-EOF" --preview-window=right:60%
-}
-
 # gfs - type gfs to get a list of your stashes
 # enter shows you the contents of the stash
 # ctrl-d shows a diff of the stash against your current HEAD
@@ -133,21 +117,4 @@ gfs() {
             git stash show -p $sha
         fi
     done
-}
-
-# fgst - pick files from `git status -s`
-is_in_git_repo() {
-    git rev-parse HEAD >/dev/null 2>&1
-}
-
-fgst() {
-    # "Nothing to see here, move along"
-    is_in_git_repo || return
-
-    local cmd="${FZF_CTRL_T_COMMAND:-"command git status -s"}"
-
-    eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" fzf -m "$@" | while read -r item; do
-        echo "$item" | awk '{print $2}'
-    done
-    echo
 }
