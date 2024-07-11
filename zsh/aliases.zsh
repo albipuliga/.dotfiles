@@ -91,6 +91,7 @@ alias gdsc='git checkout -- .'
 alias gb='pretty_git_branch_sorted'
 alias gstiu='gst --ignored -u'
 alias gfc='glg | grep $1'
+alias lg='lazygit'
 
 # Github (gh)
 alias repo='gh repo create'
