@@ -5,9 +5,10 @@ alias ...='cd ../../..'
 alias ....='cd ../../../..'
 
 # File navigation
-alias lx='eza --icons --git --sort=type'
-alias la='eza -alh --icons --git --sort=type --no-permissions --no-user'
-alias lt='eza --tree --level=2 -F --icons --git --sort=type'
+alias lx='eza --icons --git --sort=type' # List everything by type
+alias ld='eza -D --icons --git' # List only directories
+alias lh='eza -d --icons .* --group-directories-first' # List only hidden files
+alias la='eza -alh --icons --git --sort=type --no-permissions --no-user' 
 alias lta='eza --tree --level=2 -alh --icons --git --sort=type --no-permissions --no-user'
 alias lsg='ls -a | grep $1'
 
@@ -23,7 +24,6 @@ alias top='btop'
 alias rr='ranger'
 
 # fzf
-# Search syntax
 # | Token     | Match type                 | Description                          |
 # | --------- | -------------------------- | ------------------------------------ |
 # | `sbtrkt`  | fuzzy-match                | Items that match `sbtrkt`            |
