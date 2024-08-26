@@ -5,10 +5,10 @@ alias ...='cd ../../..'
 alias ....='cd ../../../..'
 
 # File navigation
-alias lx='eza --icons --git --sort=type' # List everything by type
-alias ld='eza -D --icons --git' # List only directories
+alias lx='eza --icons --git --sort=type'               # List everything by type
+alias ld='eza -D --icons --git'                        # List only directories
 alias lh='eza -d --icons .* --group-directories-first' # List only hidden files
-alias la='eza -alh --icons --git --sort=type --no-permissions --no-user' 
+alias la='eza -alh --icons --git --sort=type --no-permissions --no-user'
 alias lta='eza --tree --level=2 -alh --icons --git --sort=type --no-permissions --no-user'
 alias lsg='ls -a | grep $1'
 
@@ -52,6 +52,9 @@ alias updt='brew update && brew upgrade && omz update'
 
 # npm
 alias nrd='npm run dev'
+
+# pnpm
+alias prd='pnpm dev'
 
 # Python
 alias py='python3'
