@@ -5,10 +5,10 @@ alias ...='cd ../../..'
 alias ....='cd ../../../..'
 
 # File navigation
-alias lx='exa --icons --git --sort=type'
-alias la='exa -alh --icons --git --sort=type --no-permissions --no-user'
-alias lt='exa --tree --level=2 -F --icons --git --sort=type'
-alias lta='exa --tree --level=2 -alh --icons --git --sort=type --no-permissions --no-user'
+alias lx='eza --icons --git --sort=type'
+alias la='eza -alh --icons --git --sort=type --no-permissions --no-user'
+alias lt='eza --tree --level=2 -F --icons --git --sort=type'
+alias lta='eza --tree --level=2 -alh --icons --git --sort=type --no-permissions --no-user'
 alias lsg='ls -a | grep $1'
 
 # General
@@ -83,7 +83,7 @@ alias gps='git push origin "$(git_current_branch)"'
 alias gpl='git pull origin "$(git_current_branch)"'
 # alias glgg='pretty_git_log_all'
 alias glg='pretty_git_log'
-# alias gdf='git diff'
+alias gdf='git diff'
 alias gdfh='show_git_head'
 alias gaa='git add .'
 alias gu='git reset HEAD .'
