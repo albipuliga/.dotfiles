@@ -60,6 +60,7 @@ alias prd='pnpm dev'
 alias py='python3'
 alias main='python3 main.py'
 alias str='streamlit run'
+alias poer='poetry run python'
 
 # Pip
 alias ppl='pip list'
