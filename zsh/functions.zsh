@@ -74,7 +74,7 @@ ranger() {
 
 # fzf to select a command to run with python manage.py
 fds() {
-  local commands=("runserver" "makemigrations" "migrate" "createsuperuser")
+  local commands=("runserver" "makemigrations" "migrate" "createsuperuser" "test")
   local command=$(printf "%s\n" "${commands[@]}" | fzf --height "50%")
   if [ -n "$command" ]; then
     poetry run python manage.py $command
