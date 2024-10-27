@@ -73,7 +73,7 @@ ranger() {
 }
 
 # fzf npm run scripts
-nrs() {
+frs() {
   local script
   script=$(cat package.json | jq -r '.scripts | keys[] ' | sort | fzf) && npm run $(echo "$script")
 }
