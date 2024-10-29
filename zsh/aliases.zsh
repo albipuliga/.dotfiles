@@ -61,6 +61,7 @@ alias py='python3'
 alias main='python3 main.py'
 alias str='streamlit run'
 alias poer='poetry run python'
+alias psh='source "$(poetry env info --path)/bin/activate"'
 
 # Pip
 alias ppl='pip list'
