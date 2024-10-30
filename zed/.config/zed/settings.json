@@ -1,5 +1,12 @@
 {
   // General
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "confirm_quit": true,
   // UI
   "theme": "Ayu Dark",
@@ -41,7 +48,7 @@
   },
   // AI
   "features": {
-    "inline_completion_provider": "supermaven"
+    "inline_completion_provider": "copilot"
   },
   // Terminal
   "terminal": {

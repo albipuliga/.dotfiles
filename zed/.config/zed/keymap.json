@@ -1,2 +1,10 @@
 [
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-i": "assistant::InlineAssist",
+      "cmd-shift-i": "assistant::ToggleFocus",
+      "ctrl-enter": null
+    }
+  }
 ]
