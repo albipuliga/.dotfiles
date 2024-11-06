@@ -86,6 +86,7 @@ alias act='source bin/activate && . && c'
 alias gcl="git clone"
 alias gps='git push origin "$(git_current_branch)"'
 alias gpl='git pull origin "$(git_current_branch)"'
+alias gplm='git pull origin main'
 # alias glgg='pretty_git_log_all'
 alias glg='pretty_git_log'
 alias gdf='git diff'
