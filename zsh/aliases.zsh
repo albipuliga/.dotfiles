@@ -126,6 +126,7 @@ alias fga='forgit::add'
 # forgit_fixup=gfu
 
 # Docker
+alias lzd='lazydocker'
 alias dco="docker compose"
 alias dps="docker ps"
 alias dpa="docker ps -a"
