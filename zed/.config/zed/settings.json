@@ -49,7 +49,7 @@
   },
   // AI
   "features": {
-    "inline_completion_provider": "copilot"
+    "edit_prediction_provider": "copilot"
   },
   // Terminal
   "terminal": {
