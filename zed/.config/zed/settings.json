@@ -8,7 +8,6 @@
     },
     "version": "2"
   },
-  "confirm_quit": true,
   // UI
   "theme": "Ayu Dark",
   "ui_font_size": 19,
@@ -21,7 +20,7 @@
       },
       "function": {
         "font_style": "italic",
-        "font_weight": 600  
+        "font_weight": 600
       },
       "keyword": {
         "font_style": "oblique",
