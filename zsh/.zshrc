@@ -158,6 +158,7 @@ precmd () {
 # Exports
 export PATH="$PATH:/Users/albertopuliga/.cache/lm-studio/bin"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/Library/TeX/texbin:$PATH"
 
 # Better Exceptions
 export BETTER_EXCEPTIONS=1

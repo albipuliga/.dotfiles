@@ -62,6 +62,7 @@ alias main='python3 main.py'
 alias str='streamlit run'
 alias poer='poetry run python'
 alias psh='source "$(poetry env info --path)/bin/activate"'
+alias jupdf='jupyter nbconvert --to pdf'
 
 # Pip
 alias ppl='pip list'
