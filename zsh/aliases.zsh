@@ -22,6 +22,7 @@ alias zshrc="code ~/.zshrc"
 alias cpp='copypath'
 alias top='btop'
 alias rr='ranger'
+alias cdir='pwd | pbcopy'
 
 # fzf
 # | Token     | Match type                 | Description                          |
