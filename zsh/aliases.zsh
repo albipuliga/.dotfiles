@@ -64,6 +64,7 @@ alias str='streamlit run'
 alias poer='poetry run python'
 alias psh='source "$(poetry env info --path)/bin/activate"'
 alias jupdf='jupyter nbconvert --to pdf'
+alias why='which python3'
 
 # Pip
 alias ppl='pip list'
